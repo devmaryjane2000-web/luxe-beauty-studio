@@ -1,0 +1,345 @@
+
+/* LUXE BEAUTY STUDIO */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #49383e;
+    background: #fffafa;
+    line-height: 1.7;
+}
+
+:root {
+    --pink: #d98fa8;
+    --light-pink: #fcecf1;
+    --dark: #49383e;
+    --white: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--white);
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--dark);
+}
+
+.logo span {
+    color: var(--pink);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.nav-button,
+.primary-button {
+    background: var(--pink);
+    color: white;
+    padding: 13px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: #bd718d;
+    transform: translateY(-2px);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+/* HERO */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 25px;
+}
+
+.hero-content h1 {
+    font-size: clamp(38px, 5vw, 65px);
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero-content h1 span {
+    color: var(--pink);
+}
+
+.hero-content p {
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    color: var(--pink);
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.hero-image img {
+    height: 480px;
+    border-radius: 180px 180px 15px 15px;
+}
+
+/* GENERAL SECTIONS */
+
+.section {
+    padding: 90px 25px;
+}
+
+.about {
+    background: var(--light-pink);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image,
+.about-content {
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+}
+
+.about-image img {
+    height: 430px;
+    border-radius: 12px;
+}
+
+.about-content h2,
+.section-heading h2 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin: 15px 0;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+/* SERVICES */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.service-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: white;
+    padding-bottom: 25px;
+    text-align: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card img {
+    height: 260px;
+}
+
+.service-card h3 {
+    margin: 18px 0 5px;
+    color: var(--dark);
+}
+
+/* GALLERY */
+
+.gallery {
+    background: var(--light-pink);
+}
+
+.gallery-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-grid img {
+    height: 330px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* CONTACT */
+
+.contact {
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer .logo {
+    color: white;
+}
+
+footer p {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 18px;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero-image img {
+        height: 350px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 320px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid img {
+        height: 300px;
+    }
+
+    .section-heading h2,
+    .about-content h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+}
